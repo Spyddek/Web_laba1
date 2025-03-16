@@ -1,14 +1,30 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital@0;1&display=swap');
 
-header {
-    background-color: #CED3CA;
+
+.button1:hover {
+    background-color: #333333;         /* Темно-серый фон при наведении */
+    border-color: deepskyblue;         /* Изменение цвета границы при наведении */}
+    
+
+.top-banner {
+    background-color: #CED3CA; /* Цвет фона баннера */
+    color: black;
+    padding: 15px 20px;
+    text-align: center;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    font-size: 1.2rem; /* 19.2px */
 }
 
 .button1 {
     background-color: black;
     color: #F7F7F7;
-    border: 2px solid;                /* Граница толщиной 2px */
+    border: 2px solid ;                /* Граница толщиной 2px */
     border-radius: 2px;               /* Скругление углов на 10px */
     cursor: pointer;
     font-family: "Roboto", sans-serif;
