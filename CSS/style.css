@@ -1,14 +1,18 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital@0;1&display=swap');
 
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+}
 
-.button1:hover {
-    background-color: #333333;         /* Темно-серый фон при наведении */
-    border-color: deepskyblue;         /* Изменение цвета границы при наведении */}
+a {
+    text-decoration: none;
+    color: inherit; 
+}
     
-
 .top-banner {
-    background-color: #CED3CA; /* Цвет фона баннера */
+    background-color: #CED3CA;
     color: black;
     padding: 15px 20px;
     text-align: center;
@@ -18,21 +22,30 @@
     align-items: center;
     gap: 20px;
     flex-wrap: wrap;
-    font-size: 1.2rem; /* 19.2px */
+    font-size: 14px;
 }
 
 .button1 {
     background-color: black;
     color: #F7F7F7;
-    border: 2px solid ;                /* Граница толщиной 2px */
-    border-radius: 2px;               /* Скругление углов на 10px */
-    cursor: pointer;
+    border: 0px solid;                /* Граница толщиной 0px */
+    border-radius: 2px;               /* Скругление углов на 2px */
+    padding: 1px 20px;                /* Замена border*/
     font-family: "Roboto", sans-serif;
     font-weight: 400;
     font-style: normal;
     font-variation-settings: "wdth" 100;
     font-size: 12px;
     line-height: 28px;
+}
+
+.logo img {
+    height: 50px; 
+}
+
+.nav-links {
+    display: flex;
+    gap: 20px;
 }
 
 .roboto-custom-black {
@@ -55,4 +68,13 @@
 
 .centered-text {
     text-align: center;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
