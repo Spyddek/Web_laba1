@@ -28,9 +28,9 @@ a {
 .button1 {
     background-color: black;
     color: #F7F7F7;
-    border: 0px solid;                /* Граница толщиной 0px */
-    border-radius: 2px;               /* Скругление углов на 2px */
-    padding: 1px 20px;                /* Замена border*/
+    border: 0px solid;
+    border-radius: 2px;
+    padding: 1px 20px;
     font-family: "Roboto", sans-serif;
     font-weight: 400;
     font-style: normal;
@@ -53,7 +53,7 @@ a {
     font-optical-sizing: auto;
     font-weight: 400;
     font-style: normal;
-    font-variation-settings: "wdth" 100;  
+    font-variation-settings: "wdth" 100;
     color: black;
 }
 
