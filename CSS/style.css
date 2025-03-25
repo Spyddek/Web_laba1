@@ -1,20 +1,27 @@
-
+/* Подключаем шрифт Roboto */
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital@0;1&display=swap');
+
+/* Сброс базовых отступов */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
 body {
     margin: 0;
+    padding: 0;
+    object-fit: cover;
+    height: 100%;
     font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    background-color: #fff;
 }
 
-a {
-    text-decoration: none;
-    color: inherit; 
-}
-    
+/* Верхняя рекламная плашка */
 .top-banner {
     background-color: #CED3CA;
     color: black;
-    padding: 15px 20px;
     text-align: center;
     position: relative;
     display: flex;
@@ -23,58 +30,133 @@ a {
     gap: 20px;
     flex-wrap: wrap;
     font-size: 14px;
+    padding: 10px 0;
 }
 
 .button1 {
     background-color: black;
-    color: #F7F7F7;
-    border: 0px solid;
+    border: none;
     border-radius: 2px;
     padding: 1px 20px;
-    font-family: "Roboto", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-    font-variation-settings: "wdth" 100;
     font-size: 12px;
     line-height: 28px;
+    color: #F7F7F7; 
+    cursor: pointer;
+}
+
+/* Шапка сайта */
+header {
+    display: flex;
+    box-sizing: border-box;
+    align-items: center;
+    justify-content: space-between;
+    padding: 37px 20px; 
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .logo img {
+    box-sizing: border-box;
     height: 50px; 
+    margin: 10px 30px 10px 40px;
 }
 
+/* Основное меню слева */
 .nav-links {
+    font-size: 16px;
     display: flex;
-    gap: 20px;
+    right: 50%;
+    text-decoration: none;
+    color: inherit; 
 }
 
-.roboto-custom-black {
-    font-family: "Roboto", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 400;
-    font-style: normal;
-    font-variation-settings: "wdth" 100;
-    color: black;
+.nav-links a {
+    text-decoration: none;
+    color: inherit; 
 }
 
-.roboto-custom-f7f7f7 {
-    font-family: "Roboto", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 400;
-    font-style: normal;
-    font-variation-settings: "wdth" 100;
-    color: #F7F7F7; 
+/* Пример дополнительного класса (в коде не используется явно) */
+.first {
+    position: relative;
+    right: 107%;
+    bottom: -17px;
+    gap: 40px;
 }
 
-.centered-text {
-    text-align: center;
+.second {
+    position: relative;
+    gap: 16px;
 }
 
-header {
+/* Меню справа (журнал, поиск, иконки и т.п.) можно стилизовать отдельно при желании */
+.nav-links img {
+    cursor: pointer;
+}
+
+/* Контейнер для фонового изображения и текста */
+.hero-section {
+    position: relative; /* родитель для абсолютного позиционирования */
+    width: 100%;
+    height: auto;
+    margin: 0;
+    padding: 0;
+}
+
+/* Фоновое изображение */
+.full-screen-img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+}
+
+/* Текст поверх фонового изображения */
+.hero-content {
+    position: absolute;
+    top: 92%;
+    left: 7%;
+    transform: translateY(-50%);
+    color: white;
     display: flex;
-    align-items: center;
-    justify-content: space-between;
+    flex-direction: column;
+    gap: 8px;
+    text-underline-offset: 0.3em;
+}
+
+.hero-content a {
+    font-size: 15px; 
+    font-weight: 400;
+    text-decoration: underline;
+    color: #fff;
+}
+
+.hero-content a:hover {
+    opacity: 0.8;
+}
+
+.hero-content p {
+    font-size: 18px;
+    margin: 0;
+}
+
+/* Пример для содержания ниже */
+main section p {
+    margin: 10px 0;
+    padding: 0 20px; /* Чтобы текст отделить от краёв */
+}
+
+footer {
     padding: 20px;
-    background-color: #fff;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    font-size: 14px;
+    color: #666;
+}
+
+.vertical-line {
+    width: 2px; /* Толщина линии */
+    height: 100px; /* Высота линии */
+    background-color: black;
+    position: absolute;
+    left: 20px; /* Отступ слева */
+    top: 20px; /* Отступ сверху */
 }
