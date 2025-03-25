@@ -1,7 +1,6 @@
-/* Подключаем шрифт Roboto */
+
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital@0;1&display=swap');
 
-/* Сброс базовых отступов */
 * {
     margin: 0;
     padding: 0;
@@ -18,7 +17,6 @@ body {
     background-color: #fff;
 }
 
-/* Верхняя рекламная плашка */
 .top-banner {
     background-color: #CED3CA;
     color: black;
@@ -44,7 +42,6 @@ body {
     cursor: pointer;
 }
 
-/* Шапка сайта */
 header {
     display: flex;
     box-sizing: border-box;
@@ -61,7 +58,6 @@ header {
     margin: 10px 30px 10px 40px;
 }
 
-/* Основное меню слева */
 .nav-links {
     font-size: 16px;
     display: flex;
@@ -75,7 +71,7 @@ header {
     color: inherit; 
 }
 
-/* Пример дополнительного класса (в коде не используется явно) */
+
 .first {
     position: relative;
     right: 107%;
@@ -88,21 +84,18 @@ header {
     gap: 16px;
 }
 
-/* Меню справа (журнал, поиск, иконки и т.п.) можно стилизовать отдельно при желании */
 .nav-links img {
     cursor: pointer;
 }
 
-/* Контейнер для фонового изображения и текста */
 .hero-section {
-    position: relative; /* родитель для абсолютного позиционирования */
+    position: relative;
     width: 100%;
     height: auto;
     margin: 0;
     padding: 0;
 }
 
-/* Фоновое изображение */
 .full-screen-img {
     width: 100%;
     height: auto;
@@ -110,7 +103,6 @@ header {
     object-fit: cover;
 }
 
-/* Текст поверх фонового изображения */
 .hero-content {
     position: absolute;
     top: 92%;
@@ -139,10 +131,8 @@ header {
     margin: 0;
 }
 
-/* Пример для содержания ниже */
-main section p {
+main p {
     margin: 10px 0;
-    padding: 0 20px; /* Чтобы текст отделить от краёв */
 }
 
 footer {
@@ -153,10 +143,33 @@ footer {
 }
 
 .vertical-line {
-    width: 2px; /* Толщина линии */
-    height: 100px; /* Высота линии */
+    width: 2px;
+    height: 100px;
     background-color: black;
     position: absolute;
-    left: 20px; /* Отступ слева */
-    top: 20px; /* Отступ сверху */
+    left: 20px;
+    top: 20px;
+}
+
+.nav-panel {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: 100px;
+}
+
+.nav-panel a {
+    color: inherit;
+    font-size: 18px;
+    box-sizing: border-box;
+    margin-top: 50px;
+    text-decoration: none;
+    opacity: 60%;
+    height: 26px;
+}
+
+.nav-panel > a:first-child {
+    border-bottom: 1px black solid;
+    opacity: 100%;
 }
