@@ -14,6 +14,8 @@ body {
     height: 100%;
     font-family: 'Roboto', sans-serif;
     font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
     background-color: #fff;
 }
 
@@ -132,7 +134,7 @@ header {
 }
 
 main p {
-    margin: 10px 0;
+    margin: 3px 0px 0px 0px;
 }
 
 footer {
@@ -172,4 +174,70 @@ footer {
 .nav-panel > a:first-child {
     border-bottom: 1px black solid;
     opacity: 100%;
+}
+
+.product-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 50px;
+}
+
+.product-card {
+    margin: 15px;
+    border: 0px solid #eee;
+    border-radius: 8px;
+    overflow: hidden;
+}
+  
+.product-card img {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+}
+  
+.product-info {
+    font-size: 15px;
+}
+
+.product-info a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.badge {
+    background: #f0f0f0;
+    color: #666;
+    padding: 4px 8px;
+    border-radius: 4px;
+    display: inline-block;
+    margin-bottom: 8px;
+    font-size: 0.9em;
+}
+  
+.pricing {
+    margin-top: 2px;
+}
+  
+.old-price {
+    color: #999;
+    margin-right: 10px; 
+    font-size: 13px;
+}
+  
+.current-price {
+    color: #333;
+    font-size: 13px;
+}
+
+.dop {
+    color: #A8A8A8;
+}
+
+.red {
+    color: #FF3451;
+    font-size: 13px;
+}
+.font-weight {
+    font-weight: bold;
 }
