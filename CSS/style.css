@@ -126,6 +126,10 @@ header {
     opacity: 0.8;
 }
 
+.hero-content a:last-of-type {
+    text-decoration: none;
+}
+
 .hero-content p {
     font-size: 18px;
     margin: 0;
@@ -240,4 +244,29 @@ footer {
 
 .font-weight {
     font-weight: bold;
+}
+
+.button2 {
+    background-color: rgb(0, 0, 0); /* RGB */
+    border: none;
+    border-radius: 2px;
+    padding: 12px 80px;
+    font-size: 20px;
+    line-height: 28px;
+    color: #F7F7F7; /* HEX */
+    cursor: pointer;
+}
+
+#second {
+    text-align: center;
+    margin-bottom: 100px;
+}
+
+.container_background {
+    background-color: hsl(85, 10%, 81%);
+    padding: 10px 10px 10px 10px;
+}
+
+.white {
+    text-align: center;
 }
