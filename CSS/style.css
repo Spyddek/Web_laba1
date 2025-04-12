@@ -15,12 +15,12 @@ body {
     font-size: 16px;
     font-style: normal;
     font-weight: 400;
-    background-color: white; /* цветовое имя */
+    background-color: white;
 }
 
 .top-banner {
-    background-color: hsl(85, 10%, 81%); /* HSL */
-    color: #000; /* HEX */
+    background-color: hsl(85, 10%, 81%);
+    color: #000;
     text-align: center;
     position: relative;
     display: flex;
@@ -33,13 +33,13 @@ body {
 }
 
 .button1 {
-    background-color: rgb(0, 0, 0); /* RGB */
+    background-color: rgb(0, 0, 0);
     border: none;
     border-radius: 2px;
     padding: 1px 20px;
     font-size: 12px;
     line-height: 28px;
-    color: #F7F7F7; /* HEX */
+    color: #F7F7F7;
     cursor: pointer;
 }
 
@@ -50,7 +50,7 @@ header {
     justify-content: space-between;
     padding: 37px 20px;
     background-color: white;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* RGBA */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .logo img {
@@ -108,7 +108,7 @@ header {
     top: 92%;
     left: 7%;
     transform: translateY(-50%);
-    color: #fff; /* HEX */
+    color: #fff;
     display: flex;
     flex-direction: column;
     gap: 8px;
@@ -126,7 +126,8 @@ header {
     opacity: 0.8;
 }
 
-.hero-content a:last-of-type {
+.arrow-underline {
+    display: inline-block;
     text-decoration: none;
 }
 
@@ -143,24 +144,24 @@ footer {
     padding: 20px;
     text-align: center;
     font-size: 14px;
-    color: rgb(102, 102, 102); /* RGB */
+    color: rgb(102, 102, 102);
 }
 
 .vertical-line {
     width: 2px;
     height: 100px;
-    background-color: #000; /* HEX */
+    background-color: #000;
     position: absolute;
     left: 20px;
     top: 20px;
 }
 
 .nav-panel {
-    display: flex;
-    flex-flow: row nowrap;
+    display: grid;
+    grid-auto-flow: column;
+    gap: 100px;
     justify-content: center;
     align-items: center;
-    gap: 100px;
 }
 
 .nav-panel a {
@@ -179,15 +180,15 @@ footer {
 }
 
 .product-grid {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 30px;
     margin: 50px;
 }
 
 .product-card {
     margin: 15px;
-    border: 0px solid rgb(238, 238, 238); /* RGB заменили #eee */
+    border: 0px solid rgb(238, 238, 238);
     border-radius: 8px;
     overflow: hidden;
 }
@@ -200,7 +201,7 @@ footer {
   
 .product-info {
     font-size: 15px;
-    color: rgba(51, 51, 51, 1); /* RGBA */
+    color: rgba(51, 51, 51, 1);
 }
 
 .product-info a {
@@ -209,8 +210,8 @@ footer {
 }
 
 .badge {
-    background: hsl(0, 0%, 94%); /* HSL (заменили #f0f0f0) */
-    color: rgb(102, 102, 102);  /* RGB (заменили #666) */
+    background: hsl(0, 0%, 94%);
+    color: rgb(102, 102, 102);
     padding: 4px 8px;
     border-radius: 4px;
     display: inline-block;
@@ -223,7 +224,7 @@ footer {
 }
   
 .old-price {
-    color: hsl(0, 0%, 60%); /* HSL (заменили #999) */
+    color: hsl(0, 0%, 60%);
     margin-right: 10px; 
     font-size: 13px;
 }
@@ -234,11 +235,11 @@ footer {
 }
 
 .dop {
-    color: hsl(0, 0%, 66%); /* HSL */
+    color: hsl(0, 0%, 66%);
 }
 
 .red {
-    color: hsla(351, 100%, 62%, 1); /* HSLA */
+    color: hsla(351, 100%, 62%, 1);
     font-size: 13px;
 }
 
@@ -247,26 +248,59 @@ footer {
 }
 
 .button2 {
-    background-color: rgb(0, 0, 0); /* RGB */
+    background-color: rgb(0, 0, 0);
     border: none;
     border-radius: 2px;
     padding: 12px 80px;
     font-size: 20px;
     line-height: 28px;
-    color: #F7F7F7; /* HEX */
+    color: #F7F7F7;
     cursor: pointer;
 }
 
 #second {
     text-align: center;
-    margin-bottom: 100px;
+    margin-top: 100px;
+    margin-bottom: 150px;
 }
 
 .container_background {
+    position: relative;
+    width: 800px; 
+    height: 400px;
+    background-image: url("countainer.png") no-repeat center center; 
+    background-size: cover;
     background-color: hsl(85, 10%, 81%);
-    padding: 10px 10px 10px 10px;
+    text-align: center;
 }
 
-.white {
-    text-align: center;
+.picture {
+    display: block;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.text-block {
+    position: absolute;
+    top: 50px;
+    left: 20px;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 10px 20px;
+    border-radius: 4px;
+}
+
+.text-block p {
+    margin: 0;
+}
+
+.text-block a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+.body_position {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }

@@ -1,54 +1,40 @@
-/* Сброс стилей, опционально */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  /* Общий фон страницы — можно взять цвет фона из примера (#dfe0d2 или похожий) */
-  body {
-    font-family: sans-serif;
-    background-color: #dfe0d2; /* светло-серый с зеленоватым оттенком */
-  }
-  
-  /* Общий контейнер со спецпредложением */
-  .promo-section {
-    display: flex;              /* Размещаем элементы в строку */
-    max-width: 1200px;          /* Ширина центрального блока */
-    margin: 0 auto;             /* Центрируем по горизонтали */
-    padding: 2rem;              /* Внутренние отступы */
-    background-color: #ffffff;  /* Белый фон для контента, если нужно выделить из общего фона */
-  }
-  
-  /* Левая часть – текст */
-  .promo-text {
-    flex: 0 0 40%;              /* 40% ширины для текста, можно варьировать */
-    margin-right: 2rem;         /* Отступ справа */
-  }
-  
-  .promo-text h1 {
-    font-size: 2rem;
-    margin-bottom: 1.5rem;
-  }
-  
-  .promo-link {
-    text-decoration: none;
-    color: #333;
-    font-weight: bold;
-    border-bottom: 1px solid #333;  /* Подчеркивание ссылкой */
-    padding-bottom: 2px;
-  }
-  
-  /* Правая часть – сетка товаров */
-  .product-grid {
-    flex: 1; /* Занимаем оставшееся пространство */
-    display: grid;
-    grid-template-columns: repeat(4, 1fr); /* Четыре столбца */
-    gap: 1.5rem;                           /* Расстояние между карточками */
-  }
-  
-  .product-item img {
-    width: 100%;
-    display: block;
-    object-fit: cover; /* Чтобы изображение не искажалось */
-  }
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Контейнер для картинки и текста */
+.image-container {
+  position: relative; /* Включаем относительное позиционирование для родителя */
+  width: 600px;       /* Ширина контейнера (можно менять) */
+}
+
+/* Сама картинка */
+.picture {
+  display: block;     /* Убираем лишние отступы (часто бывает у img) */
+  width: 100%;        /* Заполняем всю ширину контейнера */
+  height: auto;       /* Сохраняем пропорции */
+}
+
+/* Блок с текстом */
+.text-block {
+  position: absolute;   /* Абсолютно позиционируем текст относительно .image-container */
+  top: 50px;            /* Отступ сверху */
+  left: 0;              /* Прижимаемся к левой части контейнера */
+  padding: 10px 20px;
+  max-width: 300px;     /* Максимальная ширина блока с текстом */
+  background-color: rgba(255, 255, 255, 0.8); /* Полупрозрачный фон, чтобы текст читался */
+  border-left: 5px solid #333; /* Для наглядности можно добавить границу слева */
+  border-radius: 4px;
+}
+
+/* Стили текста */
+.text-block h2 {
+  margin-bottom: 10px;
+  font-size: 1.5em;
+}
+.text-block p {
+  line-height: 1.4;
+  font-size: 1em;
+}

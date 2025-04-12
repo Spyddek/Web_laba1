@@ -1,37 +1,63 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-  <meta charset="UTF-8" />
-  <title>Final Stock - Up to 50% Off</title>
-  <link rel="stylesheet" href="test1.css" />
+  <meta charset="UTF-8">
+  <title>Текст поверх картинки</title>
+  <!-- Встроенные стили для демонстрации -->
+  <style>
+    /* Сбрасываем отступы и настраиваем box-sizing */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    /* Контейнер, в котором лежит картинка и текст */
+    .image-container {
+      position: relative;  /* Включаем "относительное" позиционирование */
+      width: 600px;        /* Задаём ширину (можно изменить по желанию) */
+      margin: 20px auto;   /* Центрируем для примера и даём отступ сверху */
+      border: 1px solid #ccc; /* Чтобы визуально видеть границы контейнера */
+    }
+
+    /* Сама картинка */
+    .picture {
+      display: block;       /* Убираем лишние отступы (обычно у img есть пробелы) */
+      width: 100%;          /* Заставляем картинку занимать всю ширину контейнера */
+      height: auto;         /* Оставляем пропорциональную высоту */
+    }
+
+    /* Текстовый блок, который хотим наложить поверх картинки */
+    .text-block {
+      position: absolute;   /* Абсолютное позиционирование */
+      top: 50px;            /* Отступ сверху (подбирайте под размер картинки) */
+      left: 0;              /* Прижимаем к левому краю */
+      max-width: 250px;     /* Максимальная ширина блока, чтобы текст не «утекал» вправо */
+      padding: 10px;
+    }
+
+    /* Стили текста внутри блока */
+    .text-block h2 {
+      margin-bottom: 10px;
+      font-size: 1.2em;
+    }
+    .text-block p {
+      line-height: 1.4;
+      font-size: 1em;
+    }
+  </style>
 </head>
 <body>
 
-  <section class="promo-section">
-    <!-- Левая часть с текстом -->
-    <div class="promo-text">
-      <h1>Final Stock – Up to 50% Off</h1>
-      <a href="#" class="promo-link">Shop the sale &rarr;</a>
-    </div>
-
-    <!-- Правая часть с товарами -->
-    <div class="product-grid">
-      <!-- Повторяем для каждого товара/изображения -->
-      <div class="product-item">
-        <img src="https://via.placeholder.com/150x150?text=T-Shirt" alt="T-shirt" />
-      </div>
-      <div class="product-item">
-        <img src="https://via.placeholder.com/150x150?text=Cap" alt="Cap" />
-      </div>
-      <div class="product-item">
-        <img src="https://via.placeholder.com/150x150?text=Wallet" alt="Wallet" />
-      </div>
-      <div class="product-item">
-        <img src="https://via.placeholder.com/150x150?text=Poster" alt="Poster" />
-      </div>
-      <!-- Добавляйте товары по необходимости -->
-    </div>
-  </section>
+<div class="image-container">
+  <!-- Замените путь на свою картинку -->
+  <img src="countainer_img/countainer.png" alt="Demo image" class="picture">
+  
+  <div class="text-block">
+    <h2>Заголовок</h2>
+    <p>Текст, смещённый поверх картинки. Вы можете настроить размеры, цвет, отступы, шрифты и прочее.</p>
+  </div>
+</div>
 
 </body>
 </html>
