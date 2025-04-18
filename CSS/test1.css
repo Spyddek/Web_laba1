@@ -41,7 +41,7 @@
   transition: transform 0.3s;
 }
 .transform-2d-example1:hover {
-  transform: rotate(15deg) scale(1.1);
+  transform: rotate(15deg);
 }
 
 .transform-2d-example2 {
