@@ -43,7 +43,6 @@ body {
 
 header {
     display: flex;
-    box-sizing: border-box;
     align-items: center;
     justify-content: space-between;
     padding: 37px 20px;
@@ -58,11 +57,11 @@ header {
 }
 
 .nav-links {
-    font-size: 16px;
     display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
     right: 50%;
-    text-decoration: none;
-    color: inherit;
 }
 
 .nav-links a {
@@ -266,7 +265,7 @@ footer {
     position: relative;
     width: 800px; 
     height: 400px;
-    background-image: url("countainer.png") no-repeat center center; 
+    background-image: url("/img/UGMONK.svg") no-repeat center center; 
     background-size: cover;
     background-color: hsl(85, 10%, 81%);
     text-align: center;

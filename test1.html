@@ -2,62 +2,29 @@
 <html lang="ru">
 <head>
   <meta charset="UTF-8">
-  <title>Текст поверх картинки</title>
-  <!-- Встроенные стили для демонстрации -->
-  <style>
-    /* Сбрасываем отступы и настраиваем box-sizing */
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    /* Контейнер, в котором лежит картинка и текст */
-    .image-container {
-      position: relative;  /* Включаем "относительное" позиционирование */
-      width: 600px;        /* Задаём ширину (можно изменить по желанию) */
-      margin: 20px auto;   /* Центрируем для примера и даём отступ сверху */
-      border: 1px solid #ccc; /* Чтобы визуально видеть границы контейнера */
-    }
-
-    /* Сама картинка */
-    .picture {
-      display: block;       /* Убираем лишние отступы (обычно у img есть пробелы) */
-      width: 100%;          /* Заставляем картинку занимать всю ширину контейнера */
-      height: auto;         /* Оставляем пропорциональную высоту */
-    }
-
-    /* Текстовый блок, который хотим наложить поверх картинки */
-    .text-block {
-      position: absolute;   /* Абсолютное позиционирование */
-      top: 50px;            /* Отступ сверху (подбирайте под размер картинки) */
-      left: 0;              /* Прижимаем к левому краю */
-      max-width: 250px;     /* Максимальная ширина блока, чтобы текст не «утекал» вправо */
-      padding: 10px;
-    }
-
-    /* Стили текста внутри блока */
-    .text-block h2 {
-      margin-bottom: 10px;
-      font-size: 1.2em;
-    }
-    .text-block p {
-      line-height: 1.4;
-      font-size: 1em;
-    }
-  </style>
+  <title>Demo page</title>
+  <link rel="stylesheet" href="css/test1.css">
 </head>
 <body>
+  <h1>Demo of Gradients</h1>
+  <div class="linear-demo"></div>
+  <div class="radial-demo"></div>
+  <div class="conic-demo"></div>
 
-<div class="image-container">
-  <!-- Замените путь на свою картинку -->
-  <img src="countainer_img/countainer.png" alt="Demo image" class="picture">
-  
-  <div class="text-block">
-    <h2>Заголовок</h2>
-    <p>Текст, смещённый поверх картинки. Вы можете настроить размеры, цвет, отступы, шрифты и прочее.</p>
+  <h1>Demo of 2D Transforms</h1>
+  <div class="transform-2d-example1">Наведи на меня (rotate+scale)</div>
+  <div class="transform-2d-example2">Наведи на меня (skewX)</div>
+
+  <h1>Demo of 3D Transforms</h1>
+  <div class="transform-3d-example1">
+    <div class="box">3D box 1</div>
   </div>
-</div>
+  <div class="transform-3d-example2">
+    <div class="card-3d">3D box 2</div>
+  </div>
 
+  <h1>Demo of Transitions</h1>
+  <div class="transition-demo1">Hover меня для смены цвета</div>
+  <div class="transition-demo2">Hover меня для изменения размеров</div>
 </body>
 </html>

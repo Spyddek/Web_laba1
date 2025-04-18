@@ -1,40 +1,105 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+.transition-demo1 {
+  background-color: #3498db;
+  transition: background-color 0.5s ease;
+}
+.transition-demo1:hover {
+  background-color: #2ecc71;
 }
 
-/* Контейнер для картинки и текста */
-.image-container {
-  position: relative; /* Включаем относительное позиционирование для родителя */
-  width: 600px;       /* Ширина контейнера (можно менять) */
+.transition-demo2 {
+  width: 100px;
+  height: 100px;
+  background-color: #e74c3c;
+  transition: width 0.5s ease, height 0.5s ease;
+}
+.transition-demo2:hover {
+  width: 150px;
+  height: 150px;
 }
 
-/* Сама картинка */
-.picture {
-  display: block;     /* Убираем лишние отступы (часто бывает у img) */
-  width: 100%;        /* Заполняем всю ширину контейнера */
-  height: auto;       /* Сохраняем пропорции */
+.transform-3d-example1 {
+  perspective: 1000px; /* «камера» */
+}
+.transform-3d-example1 .box {
+  transition: transform 0.3s;
+}
+.transform-3d-example1 .box:hover {
+  transform: rotateY(45deg);
 }
 
-/* Блок с текстом */
-.text-block {
-  position: absolute;   /* Абсолютно позиционируем текст относительно .image-container */
-  top: 50px;            /* Отступ сверху */
-  left: 0;              /* Прижимаемся к левой части контейнера */
-  padding: 10px 20px;
-  max-width: 300px;     /* Максимальная ширина блока с текстом */
-  background-color: rgba(255, 255, 255, 0.8); /* Полупрозрачный фон, чтобы текст читался */
-  border-left: 5px solid #333; /* Для наглядности можно добавить границу слева */
-  border-radius: 4px;
+.transform-3d-example2 {
+  perspective: 1000px;
+}
+.transform-3d-example2 .card-3d {
+  transition: transform 0.3s;
+}
+.transform-3d-example2 .card-3d:hover {
+  transform: rotateX(30deg) translateZ(50px);
 }
 
-/* Стили текста */
-.text-block h2 {
-  margin-bottom: 10px;
-  font-size: 1.5em;
+.transform-2d-example1 {
+  transition: transform 0.3s;
 }
-.text-block p {
-  line-height: 1.4;
-  font-size: 1em;
+.transform-2d-example1:hover {
+  transform: rotate(15deg) scale(1.1);
+}
+
+.transform-2d-example2 {
+  transition: transform 0.3s;
+}
+.transform-2d-example2:hover {
+  transform: skewX(20deg);
+}
+.conic-demo {
+  width: 200px;
+  height: 200px;
+  background: conic-gradient(from 0deg, red, yellow, green, cyan, blue, magenta, red);
+}
+.radial-demo {
+  width: 200px;
+  height: 200px;
+  background: radial-gradient(circle, #ff7e5f, #feb47b);
+}
+
+.linear-demo {
+  width: 200px;
+  height: 200px;
+  background: linear-gradient(to right, #ff7e5f, #feb47b);
+}
+
+.form-title {
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+}
+
+.form-container {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15); /* мягкая тень */
+}
+
+.new-card {
+  position: relative;
+}
+
+/* Скрываем контент по умолчанию */
+.card-content {
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+/* Трюк с анимацией для скрытия loader и показа контента */
+@keyframes showContent {
+  0% {
+    opacity: 1; /* loader виден */
+  }
+  80% {
+    opacity: 1; 
+  }
+  100% {
+    opacity: 0; /* loader исчезает к концу */
+  }
+}
+.card-loader {
+  animation: spin 1s infinite linear, showContent 3s forwards;
 }
